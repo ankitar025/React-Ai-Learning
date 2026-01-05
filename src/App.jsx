@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
+  // State for user input
+  const [prompt, setPrompt] = useState("");
+
+  // State for AI response
+  const [response, setResponse] = useState("");
+
+  // Button click handler
+  const handleClick = () => {
+    setResponse("This is an AI-generated response.");
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="p-10 text-center flex justify-center items-center flex-col">
+      <h2 className="text-5xl pb-9">React + AI Demo</h2>
+
+
+      {/* Input box */}
+      <input
+        type="text"
+        placeholder="Enter your question"
+        className="border p-4 rounded-md min-w-[350px] "
+        value={prompt}
+        onChange={(e) => setPrompt(e.target.value)}
+      />
+
+
+      {/* Button */}
+      <button onClick={handleClick} className="m-3 min-w-[200px]">
+        Ask AI
+      </button>
+      
+      
+
+      {/* Output area */}
+      <div className="text-3xl mb-5 mt-5"><strong>AI Response:</strong></div>
+      <p>{response}</p>
+    </div>
+  );
 }
 
-export default App
+export default App;
