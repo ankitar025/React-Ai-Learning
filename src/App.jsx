@@ -3,6 +3,8 @@ import InputBox from "../day-3-components+AI/Components/InputBox";
 import Button from "../day-3-components+AI/Components/Button";
 import OutputBox from "../day-3-components+AI/Components/OutputBox";
 
+import Index from "../day-4-useEffect + API Flow/Index";
+
 function App() {
   const [prompt, setPrompt] = useState("");
   const [response, setResponse] = useState("");
@@ -28,7 +30,11 @@ function App() {
       <Button onClick={handleAskAI} />
 
       <OutputBox response={response} />
+
+      <Index/>
     </div>
+
+   
   );
 }
 
