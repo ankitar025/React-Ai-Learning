@@ -2,8 +2,10 @@ import { useState } from "react";
 import InputBox from "../day-3-components+AI/Components/InputBox";
 import Button from "../day-3-components+AI/Components/Button";
 import OutputBox from "../day-3-components+AI/Components/OutputBox";
+import Index from "../day-5-fetch+AI";
 
-import Index from "../day-4-useEffect + API Flow/Index";
+// import Index from "../day-4-useEffect + API Flow/Index";
+
 
 function App() {
   const [prompt, setPrompt] = useState("");
@@ -31,7 +33,9 @@ function App() {
 
       <OutputBox response={response} />
 
+      
       <Index/>
+      
     </div>
 
    
