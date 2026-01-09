@@ -1,10 +1,8 @@
 import { useState } from "react";
-import InputBox from "../day-3-components+AI/Components/InputBox";
-import Button from "../day-3-components+AI/Components/Button";
-import OutputBox from "../day-3-components+AI/Components/OutputBox";
-import Index from "../day-5-fetch+AI";
-
-// import Index from "../day-4-useEffect + API Flow/Index";
+import InputBox from "./day-3-Components+AI/Components/InputBox";
+import Button from "./day-3-Components+AI/Components/Button";
+import OutputBox from "./day-3-Components+AI/Components/OutputBox";
+import Index from "./day-6-forms-ai-chat/Index";
 
 
 function App() {
@@ -29,11 +27,12 @@ function App() {
         onChange={(e) => setPrompt(e.target.value)}
       />
 
-      <Button onClick={handleAskAI} />
+      <Button lick={handleAskAI} />
 
       <OutputBox response={response} />
 
       
+      {/* <Index/> */}
       <Index/>
       
     </div>
