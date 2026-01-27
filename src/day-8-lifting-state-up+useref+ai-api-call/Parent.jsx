@@ -56,6 +56,7 @@ const Parent = () => {
         setPrompt={setPrompt}
         askAI={askAI}
         inputRef={inputRef}
+        
       />
 
       <button onClick={focusInput} style={{ marginTop: "10px" }}>
