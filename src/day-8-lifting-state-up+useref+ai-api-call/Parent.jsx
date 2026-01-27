@@ -51,12 +51,13 @@ const Parent = () => {
     <div style={{ padding: "20px", maxWidth: "500px" }}>
       <h2>AI Prompt Generator</h2>
 
+
       <PromptInput
         prompt={prompt}
         setPrompt={setPrompt}
         askAI={askAI}
         inputRef={inputRef}
-        
+
       />
 
       <button onClick={focusInput} style={{ marginTop: "10px" }}>
