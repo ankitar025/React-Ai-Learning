@@ -38,7 +38,7 @@ function App() {
       {/* <AiForm/> */}
       {/* <AiGpt/> */}
       
-      <Parent/>
+      {/* <Parent/> */}
       
       
     </div>
